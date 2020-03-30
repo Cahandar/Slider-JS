@@ -4,7 +4,7 @@ let Slider={
    sekiller : ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"]
 };
 let Say = Slider.sekiller.length;
-let i = 1;
+let i = 0;
 Deyis(Slider.sekiller[i]);
 function Deyis(x){
     document.getElementById("slider").style.backgroundImage =`url("img/${x}")`;
@@ -28,7 +28,7 @@ function Next(){
         zaman();
     }else{
         
-        i=1;
+        i=0;
         Deyis(Slider.sekiller[i]);
     }
 }
@@ -36,7 +36,8 @@ function Next(){
 prv.onclick=function(){
 
     if(i==0){
-        
+        artim=0;
+        zaman();
         i=Say-1;
         Deyis(Slider.sekiller[i]);
         
